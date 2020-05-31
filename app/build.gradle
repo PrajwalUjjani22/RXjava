@@ -1,3 +1,7 @@
+plugins {
+    id "me.tatarka.retrolambda" version "3.7.1"
+}
+
 apply plugin: 'com.android.application'
 
 android {
@@ -6,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.ujjani.rxjavaapp"
-        minSdkVersion 24
+        minSdkVersion 26
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"

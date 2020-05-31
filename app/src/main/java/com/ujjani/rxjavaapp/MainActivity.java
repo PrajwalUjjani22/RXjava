@@ -43,12 +43,12 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(rvCustomAdapter);
 
-        Observable.just("How are you").subscribe(new Consumer<String>() {  //observable is used to get actual data
-            @Override
-            public void accept(String s) throws Throwable {                //Subscribe method in order to get the data which is emitted from Observable
-                txtHi.setText(s);
-            }
-        });
+//        Observable.just("How are you").subscribe(new Consumer<String>() {  //observable is used to get actual data
+//            @Override
+//            public void accept(String s) throws Throwable {                //Subscribe method in order to get the data which is emitted from Observable
+//                txtHi.setText(s);
+//            }
+//        });
 ////        Observable.just("Prajwal","Rathna","Jayaramu","Bhuvana").subscribe(new Consumer<String>() {
 ////            @Override
 ////            public void accept(String s) throws Throwable {
