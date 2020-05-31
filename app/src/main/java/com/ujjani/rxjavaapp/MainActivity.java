@@ -9,8 +9,11 @@ import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.Consumer;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,14 +49,29 @@ public class MainActivity extends AppCompatActivity {
                 txtHi.setText(s);
             }
         });
-        Observable.just("Prajwal","Rathna","Jayaramu","Bhuvana").subscribe(new Consumer<String>() {
+////        Observable.just("Prajwal","Rathna","Jayaramu","Bhuvana").subscribe(new Consumer<String>() {
+////            @Override
+////            public void accept(String s) throws Throwable {
+////
+////                rvCustomAdapter.addStringToList(s);
+////
+////            }
+//        });
+
+        Entry  entry1  = new Entry("ps4", BigDecimal.valueOf(1500),new Date());
+        Entry  entry2  = new Entry("XBox one", BigDecimal.valueOf(2000),new Date());
+        Entry  entry3  = new Entry("XBox one s", BigDecimal.valueOf(2500),new Date());
+        Entry  entry4  = new Entry("XBox one x", BigDecimal.valueOf(3000),new Date());
+
+        Observable.just(entry1, entry2, entry3, entry4).subscribe(new Consumer<Entry>() {
             @Override
-            public void accept(String s) throws Throwable {
+            public void accept(Entry entry) throws Throwable {
 
-                rvCustomAdapter.addStringToList(s);
-
+                rvCustomAdapter.addEntry(entry);
             }
         });
+
+
 
     }
 }

@@ -1,13 +1,16 @@
 package com.ujjani.rxjavaapp;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
 public class Entry {
 
     private final String entryName;
-    private final String entryPrice;
-    private final String entryDate;
+    private final BigDecimal entryPrice;
+    private final Date entryDate;
 
 
-    public Entry(String entryName, String entryPrice, String entryDate) {
+    public Entry(String entryName, BigDecimal entryPrice, Date entryDate) {
         this.entryName = entryName;
         this.entryPrice = entryPrice;
         this.entryDate = entryDate;
@@ -17,11 +20,11 @@ public class Entry {
         return entryName;
     }
 
-    public String getEntryPrice() {
+    public BigDecimal getEntryPrice() {
         return entryPrice;
     }
 
-    public String getEntryDate() {
+    public Date getEntryDate() {
         return entryDate;
     }
 }
